@@ -13,7 +13,7 @@ export default function useIsWaitingForMotion(): boolean {
 
       setTimeout(() => {
         if (!cancelled) setIsWaiting(false);
-      }, 3000);
+      }, 4000);
     };
 
     load();
