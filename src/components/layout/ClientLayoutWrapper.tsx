@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 import Loading from "@/components/Loading";
 import { SmoothCursor } from "@/components/magicui/smooth-cursor";
@@ -18,6 +18,10 @@ export default function ClientLayoutWrapper({
 }) {
   const isWaitingForMotion = useIsWaitingForMotion();
   const isTouchDevice = useIsTouchDevice();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (isWaitingForMotion) return <Loading />;
 

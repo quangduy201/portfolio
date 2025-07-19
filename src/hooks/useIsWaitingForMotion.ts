@@ -8,9 +8,15 @@ export default function useIsWaitingForMotion(): boolean {
   useEffect(() => {
     let cancelled = false;
 
-    import("motion/react").then(() => {
-      if (!cancelled) setIsWaiting(false);
-    });
+    const load = async () => {
+      await import("motion/react");
+
+      setTimeout(() => {
+        if (!cancelled) setIsWaiting(false);
+      }, 3000);
+    };
+
+    load();
 
     return () => {
       cancelled = true;
