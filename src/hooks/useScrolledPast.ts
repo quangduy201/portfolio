@@ -37,7 +37,7 @@ export default function useScrolledPast(elementIds: string[]): string {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [elementIds, isAtBottom]);
+  }, [elementIds, isAtBottom, isAtTop]);
 
   return scrolledPast;
 }
