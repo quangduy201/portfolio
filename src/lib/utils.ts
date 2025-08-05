@@ -23,13 +23,6 @@ export function smoothScroll(elementId: MenuId) {
     ?.scrollIntoView({ behavior: "smooth" });
 }
 
-export function checkIsTouchDevice(): boolean {
-  if (typeof window !== "undefined") {
-    return window.matchMedia("(hover: none)").matches;
-  }
-  return false;
-}
-
 export const monthYearFormatter = new Intl.DateTimeFormat("en-US", {
   month: "2-digit",
   year: "numeric",

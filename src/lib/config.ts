@@ -533,7 +533,7 @@ export async function fetchPortfolioConfig() {
       headers: {
         "X-SILO-KEY": JSON_SILO_KEY,
       },
-      cache: "no-store",
+      cache: "default",
     });
 
     if (!res.ok) {
