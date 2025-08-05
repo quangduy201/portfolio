@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 
 export default function useIsTouchDevice(): boolean {
-  const [isTouchDevice, setIsTouchDevice] = useState<boolean>(false);
+  const [isTouchDevice, setIsTouchDevice] = useState<boolean>(
+    window.matchMedia("(hover: none").matches,
+  );
 
   useEffect(() => {
     if (typeof window === "undefined") return;

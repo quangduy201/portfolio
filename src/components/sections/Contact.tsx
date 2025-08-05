@@ -7,18 +7,18 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { FORM_ENDPOINT } from "@/config/portfolio.config";
 import { Button } from "@/components/shadcnui/button";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/shadcnui/form";
-import { Textarea } from "@/components/shadcnui/textarea";
 import { Input } from "@/components/shadcnui/input";
+import { Textarea } from "@/components/shadcnui/textarea";
+import { FORM_ENDPOINT } from "@/lib/config";
+import { PortfolioConfig } from "@/lib/types";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required"),
@@ -29,7 +29,7 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
-export default function Contact() {
+export default function Contact({ config }: { config: PortfolioConfig }) {
   const [status, setStatus] = useState<
     "Send" | "Sending..." | "Thank you!" | "Send again"
   >("Send");

@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Nanum_Pen_Script } from "next/font/google";
+import Link from "next/link";
 
 import { NavBar, NavBarMobile } from "@/components/NavBar";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";

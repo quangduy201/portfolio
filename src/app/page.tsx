@@ -5,17 +5,20 @@ import Education from "@/components/sections/Education";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
+import { fetchPortfolioConfig } from "@/lib/config";
 
-export default function Portfolio() {
+export default async function Portfolio() {
+  const config = await fetchPortfolioConfig();
+
   return (
     <main>
-      <Home />
-      <About />
-      <Experience />
-      <Education />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Home config={config} />
+      <About config={config} />
+      <Experience config={config} />
+      <Education config={config} />
+      <Skills config={config} />
+      <Projects config={config} />
+      <Contact config={config} />
     </main>
   );
 }

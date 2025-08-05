@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 import useScrolledPast from "@/hooks/useScrolledPast";
-import { smoothScroll } from "@/lib/utils";
 import { MenuItem } from "@/lib/types";
+import { smoothScroll } from "@/lib/utils";
 
 const menu: MenuItem[] = [
   { id: "home", title: "Home" },

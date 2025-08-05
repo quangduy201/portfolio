@@ -1,21 +1,19 @@
 "use client";
 
-import { motion } from "motion/react";
 import { ReactNode } from "react";
+import { motion } from "motion/react";
 
-interface TimelineSectionProps<T> {
+interface TimelineSectionProps {
   id: string;
   title: string;
-  items: T[];
-  renderItem: (item: T) => ReactNode;
+  items: ReactNode[];
 }
 
-export default function TimelineSection<T>({
+export default function TimelineSection({
   id,
   title,
   items,
-  renderItem,
-}: TimelineSectionProps<T>) {
+}: TimelineSectionProps) {
   return (
     <section id={id} className="flex w-full flex-col items-center pt-24">
       <h1 className="relative text-xl font-semibold text-accent after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:bg-accent after:content-[''] lg:text-3xl">
@@ -41,7 +39,7 @@ export default function TimelineSection<T>({
               transition={{ duration: 0.1, delay: index * 0.1 }}
               className="relative rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-md"
             >
-              {renderItem(item)}
+              {item}
             </motion.div>
           </div>
         ))}

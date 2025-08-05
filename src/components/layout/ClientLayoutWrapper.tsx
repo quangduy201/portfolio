@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode, useEffect } from "react";
+import { Portal } from "@radix-ui/react-portal";
 
 import Loading from "@/components/Loading";
 import { SmoothCursor } from "@/components/magicui/smooth-cursor";
@@ -9,7 +10,6 @@ import { TooltipProvider } from "@/components/shadcnui/tooltip";
 import useIsTouchDevice from "@/hooks/useIsTouchDevice";
 import useIsWaitingForMotion from "@/hooks/useIsWaitingForMotion";
 import { hideCursor } from "@/lib/utils";
-import { Portal } from "@radix-ui/react-portal";
 
 export default function ClientLayoutWrapper({
   children,

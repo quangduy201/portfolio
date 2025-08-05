@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["opengraph.githubassets.com"],
+    domains: [new URL(process.env.ASSETS_BASE_URL).hostname],
   },
 };
 
