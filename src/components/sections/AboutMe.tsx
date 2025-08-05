@@ -3,7 +3,7 @@ import ImageCard from "@/components/ImageCard";
 import SummaryCard from "@/components/SummaryCard";
 import { PortfolioConfig } from "@/lib/types";
 
-export default async function AboutMe({ config }: { config: PortfolioConfig }) {
+export default async function AboutMeSection({ config }: { config: PortfolioConfig }) {
   const assets = config.assets;
   const raw = config.about;
   const about = {
@@ -12,8 +12,10 @@ export default async function AboutMe({ config }: { config: PortfolioConfig }) {
       ...raw.personal,
       dob: new Date(raw.personal.dob),
     },
-    image: raw.image.startsWith("/assets/") ? raw.image : `${assets.url}/${raw.image}`,
-  }
+    image: raw.image.startsWith("/assets/")
+      ? raw.image
+      : `${assets.url}/${raw.image}`,
+  };
 
   return (
     <section id={"about"} className={"flex w-full flex-col items-center pt-24"}>

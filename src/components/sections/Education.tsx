@@ -2,7 +2,7 @@ import EducationItem from "@/components/EducationItem";
 import TimelineSection from "@/components/TimelineSection";
 import { Education, PortfolioConfig } from "@/lib/types";
 
-export default async function Education({ config }: { config: PortfolioConfig }) {
+export default async function EducationSection({ config }: { config: PortfolioConfig }) {
   const assets = config.assets;
   const education = config.education.map((item) => ({
     ...item,

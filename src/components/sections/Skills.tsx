@@ -2,7 +2,7 @@ import SkillItem from "@/components/SkillItem";
 import TimelineSection from "@/components/TimelineSection";
 import { PortfolioConfig } from "@/lib/types";
 
-export default async function Skills({ config }: { config: PortfolioConfig }) {
+export default async function SkillsSection({ config }: { config: PortfolioConfig }) {
   const assets = config.assets;
   const skills = config.skills.map((item) => ({
     title: item.title,

@@ -1,10 +1,10 @@
-import Home from "@/components/sections/Home";
-import About from "@/components/sections/AboutMe";
-import Experience from "@/components/sections/Experience";
-import Education from "@/components/sections/Education";
-import Skills from "@/components/sections/Skills";
-import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
+import HeroSection from "@/components/sections/Hero";
+import AboutMeSection from "@/components/sections/AboutMe";
+import ExperienceSection from "@/components/sections/Experience";
+import EducationSection from "@/components/sections/Education";
+import SkillsSection from "@/components/sections/Skills";
+import ProjectsSection from "@/components/sections/Projects";
+import ContactSection from "@/components/sections/Contact";
 import { fetchPortfolioConfig } from "@/lib/config";
 
 export default async function Portfolio() {
@@ -12,13 +12,13 @@ export default async function Portfolio() {
 
   return (
     <main>
-      <Home config={config} />
-      <About config={config} />
-      <Experience config={config} />
-      <Education config={config} />
-      <Skills config={config} />
-      <Projects config={config} />
-      <Contact config={config} />
+      <HeroSection config={config} />
+      <AboutMeSection config={config} />
+      <ExperienceSection config={config} />
+      <EducationSection config={config} />
+      <SkillsSection config={config} />
+      <ProjectsSection config={config} />
+      <ContactSection config={config} />
     </main>
   );
 }

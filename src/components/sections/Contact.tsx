@@ -29,7 +29,7 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
-export default function Contact({ config }: { config: PortfolioConfig }) {
+export default function ContactSection({ config }: { config: PortfolioConfig }) {
   const [status, setStatus] = useState<
     "Send" | "Sending..." | "Thank you!" | "Send again"
   >("Send");

@@ -2,9 +2,11 @@ import HeroPhoto from "@/components/HeroPhoto";
 import HeroProfile from "@/components/HeroProfile";
 import { PortfolioConfig } from "@/lib/types";
 
-export default async function Home({ config }: { config: PortfolioConfig }) {
+export default async function HeroSection({ config }: { config: PortfolioConfig }) {
   const { assets, info, socials } = config;
-  const image = info.image.startsWith("/assets/") ? info.image : `${assets.url}/${info.image}`;
+  const image = info.image.startsWith("/assets/")
+    ? info.image
+    : `${assets.url}/${info.image}`;
 
   return (
     <section

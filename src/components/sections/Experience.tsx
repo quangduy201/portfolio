@@ -2,7 +2,7 @@ import ExperienceItem from "@/components/ExperienceItem";
 import TimelineSection from "@/components/TimelineSection";
 import { Experience, PortfolioConfig } from "@/lib/types";
 
-export default async function Experience({ config }: {config: PortfolioConfig}) {
+export default async function ExperienceSection({ config }: { config: PortfolioConfig }) {
   const assets = config.assets;
   const experiences = config.experience.map((item) => ({
     ...item,

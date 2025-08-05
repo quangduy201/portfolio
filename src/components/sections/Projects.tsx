@@ -2,7 +2,7 @@ import ProjectItem from "@/components/ProjectItem";
 import TimelineSection from "@/components/TimelineSection";
 import { Image, PortfolioConfig, Project } from "@/lib/types";
 
-export default async function Projects({ config }: { config: PortfolioConfig }) {
+export default async function ProjectsSection({ config }: { config: PortfolioConfig }) {
   const assets = config.assets;
   const projects = config.projects.map((item) => ({
     ...item,
