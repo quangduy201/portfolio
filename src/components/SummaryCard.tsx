@@ -4,7 +4,10 @@ import { motion } from "motion/react";
 
 import { Personal } from "@/lib/types";
 
-function calculateAge(dob: Date): number {
+function calculateAge(dob: Date | string): number {
+  if (typeof dob === "string") {
+    dob = new Date(dob);
+  }
   const today = new Date();
   const yearsDifference = today.getFullYear() - dob.getFullYear();
 

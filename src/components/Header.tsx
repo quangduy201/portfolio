@@ -7,7 +7,7 @@ import { NavBar, NavBarMobile } from "@/components/NavBar";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import useIsAtTop from "@/hooks/useIsAtTop";
 
-const nanumPenScript = Nanum_Pen_Script({ subsets: ["latin"], weight: "400", display: "swap" });
+const nanumPenScript = Nanum_Pen_Script({ subsets: ["latin"], weight: "400", display: "swap", adjustFontFallback: false });
 
 export default function Header() {
   const isAtTop = useIsAtTop();

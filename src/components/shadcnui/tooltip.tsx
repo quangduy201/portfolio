@@ -1,11 +1,11 @@
 "use client";
 
 import * as React from "react";
+import { HTMLAttributes } from "react";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
 import { cn } from "@/lib/utils";
 import useIsTouchDevice from "@/hooks/useIsTouchDevice";
-import { HTMLAttributes } from "react";
 
 function TooltipProvider({
   delayDuration = 0,

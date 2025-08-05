@@ -6,8 +6,10 @@ import { useScroll } from "motion/react";
 export default function useIsAtBottom(offset: number = 0): boolean {
   const { scrollY } = useScroll();
   const [isAtBottom, setIsAtBottom] = useState<boolean>(
-    scrollY.get() + window.innerHeight >=
-      document.documentElement.scrollHeight - offset,
+    typeof window === undefined
+      ? false
+      : scrollY.get() + window.innerHeight >=
+          document.documentElement.scrollHeight - offset,
   );
 
   useEffect(() => {

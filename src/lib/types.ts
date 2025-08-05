@@ -36,7 +36,7 @@ export interface Social {
 
 export interface Personal {
   fullName: string;
-  dob: Date;
+  dob: Date | string;
   gender: string;
   location: string;
   hobbies: string[];
@@ -53,8 +53,8 @@ export interface Experience {
   title: string;
   organization: string;
   location: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: Date | string;
+  endDate: Date | string;
   descriptions: string[];
   logo: string;
 }
@@ -63,8 +63,8 @@ export interface Education {
   title: string;
   organization: string;
   location: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: Date | string;
+  endDate: Date | string;
   descriptions: string[];
   logo: string;
 }
@@ -93,8 +93,8 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
-  startDate: Date;
-  endDate: Date;
+  startDate: Date | string;
+  endDate: Date | string;
   links: {
     image: Image;
     sources: Source[];

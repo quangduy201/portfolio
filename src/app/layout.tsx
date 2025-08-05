@@ -36,6 +36,9 @@ export async function generateMetadata(): Promise<Metadata> {
       url: seo.url,
       type: "website",
     },
+    icons: {
+      icon: "/favicon.ico",
+    },
     metadataBase: new URL(seo.url),
     alternates: {
       canonical: seo.url,

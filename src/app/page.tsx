@@ -6,9 +6,10 @@ import SkillsSection from "@/components/sections/Skills";
 import ProjectsSection from "@/components/sections/Projects";
 import ContactSection from "@/components/sections/Contact";
 import { fetchPortfolioConfig } from "@/lib/config";
+import { PortfolioConfig } from "@/lib/types";
 
 export default async function Portfolio() {
-  const config = await fetchPortfolioConfig();
+  const config: PortfolioConfig = await fetchPortfolioConfig();
 
   return (
     <main>
