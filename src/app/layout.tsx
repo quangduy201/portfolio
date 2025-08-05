@@ -22,26 +22,23 @@ export async function generateMetadata(): Promise<Metadata> {
     title: `${info.name} | Portfolio`,
     description: `Personal portfolio of ${info.name} - ${info.position}`,
     keywords: seo.keywords,
+    metadataBase: new URL(seo.url),
     openGraph: {
       title: `${info.name} | Portfolio`,
-      description: `Personal portfolio of ${info.name} - ${info.description}`,
+      description: `Personal portfolio of ${info.name} - ${info.position}`,
+      url: seo.url,
+      siteName: info.name,
       images: [
         {
-          url: `${seo.url}/${seo.ogImage}`,
-          width: 1200,
-          height: 630,
-          alt: `${info.name}'s Portfolio`,
+          url: seo.ogImage,
         },
       ],
-      url: seo.url,
-      type: "website",
     },
-    icons: {
-      icon: "/favicon.ico",
-    },
-    metadataBase: new URL(seo.url),
     alternates: {
       canonical: seo.url,
+    },
+    twitter: {
+      card: "summary_large_image",
     },
   };
 }

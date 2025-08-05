@@ -1,6 +1,6 @@
 import { PortfolioConfig } from "@/lib/types";
 
-const fallbackConfig = {
+const fallbackConfig: PortfolioConfig = {
   info: {
     name: "Dinh Quang Duy",
     position: "Full Stack Developer",
@@ -485,7 +485,7 @@ const fallbackConfig = {
     location: "Ho Chi Minh City, Vietnam",
   },
   seo: {
-    ogImage: "/assets/thumbnail.jpeg",
+    ogImage: "opengraph-image.jpeg",
     url: "https://quangduy.id.vn",
     keywords: [
       "dinh",
