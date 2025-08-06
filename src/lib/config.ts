@@ -485,6 +485,8 @@ const fallbackConfig: PortfolioConfig = {
     location: "Ho Chi Minh City, Vietnam",
   },
   seo: {
+    title: "Quang Duy | Portfolio",
+    description: "Personal portfolio website of Quang Duy - A passionate developer crafting digital experiences",
     ogImage: "opengraph-image.jpeg",
     url: "https://quangduy.id.vn",
     keywords: [
@@ -520,7 +522,7 @@ const fallbackConfig: PortfolioConfig = {
 const JSON_SILO_URL = process.env.JSON_SILO_URL;
 const JSON_SILO_KEY = process.env.JSON_SILO_KEY;
 
-export async function fetchPortfolioConfig() {
+export async function fetchPortfolioConfig(): Promise<PortfolioConfig> {
   if (!JSON_SILO_URL || !JSON_SILO_KEY) {
     console.warn(
       "Missing JSON_SILO_URL or JSON_SILO_KEY. Using fallback config.",

@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
 import { fetchPortfolioConfig } from "@/lib/config";
+import { Seo } from "@/lib/types";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -15,30 +16,19 @@ const jetbrainsMono = JetBrains_Mono({
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = await fetchPortfolioConfig();
-  const seo = config.seo;
-  const info = config.info;
+  const seo: Seo = config.seo;
 
   return {
-    title: `${info.name} | Portfolio`,
-    description: `Personal portfolio of ${info.name} - ${info.position}`,
+    title: seo.title,
+    description: seo.description,
     keywords: seo.keywords,
     metadataBase: new URL(seo.url),
-    openGraph: {
-      title: `${info.name} | Portfolio`,
-      description: `Personal portfolio of ${info.name} - ${info.position}`,
-      url: seo.url,
-      siteName: info.name,
-      images: [
-        {
-          url: seo.ogImage,
-        },
-      ],
-    },
     alternates: {
       canonical: seo.url,
     },
     twitter: {
       card: "summary_large_image",
+      title: seo.url,
     },
   };
 }

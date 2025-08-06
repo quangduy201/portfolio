@@ -109,6 +109,8 @@ export interface Contact {
 }
 
 export interface Seo {
+  title: string;
+  description: string;
   ogImage: string;
   url: string;
   keywords: string[];
