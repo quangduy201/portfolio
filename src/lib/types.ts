@@ -20,14 +20,6 @@ export interface Info {
   image: string;
 }
 
-export interface Assets {
-  url: string;
-  exp: string;
-  edu: string;
-  skills: string;
-  projects: string;
-}
-
 export interface Social {
   name: string;
   link: string;
@@ -110,15 +102,15 @@ export interface Contact {
 
 export interface Seo {
   title: string;
+  appName: string;
   description: string;
-  ogImage: string;
   url: string;
   keywords: string[];
 }
 
 export interface PortfolioConfig {
+  assetsUrl: string;
   info: Info;
-  assets: Assets;
   socials: Social[];
   about: About;
   experience: Experience[];

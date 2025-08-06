@@ -3,14 +3,12 @@ import TimelineSection from "@/components/TimelineSection";
 import { Experience, PortfolioConfig } from "@/lib/types";
 
 export default async function ExperienceSection({ config }: { config: PortfolioConfig }) {
-  const assets = config.assets;
+  const assetsUrl = config.assetsUrl;
   const experiences = config.experience.map((item) => ({
     ...item,
     startDate: new Date(item.startDate),
     endDate: new Date(item.endDate),
-    logo: item.logo.startsWith("/assets/")
-      ? `${item.logo}`
-      : `${assets.url}/${assets.exp}/${item.logo}`,
+    logo: `${assetsUrl}/${item.logo}`,
   })) as Experience[];
 
   const renderedItems = experiences.map((exp, i) => (

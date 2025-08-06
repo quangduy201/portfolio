@@ -1,20 +1,14 @@
 import { PortfolioConfig } from "@/lib/types";
 
 const fallbackConfig: PortfolioConfig = {
+  assetsUrl: "",
   info: {
     name: "Dinh Quang Duy",
     position: "Full Stack Developer",
     description: "A passionate developer crafting digital experiences",
     cvUrl:
       "https://drive.google.com/file/d/1Btq3Y3_9wFom4rKIQRLY0w0zQVKpGVqf/view",
-    image: "/assets/home.jpg",
-  },
-  assets: {
-    url: "https://zs02s7gizl0we3kb.public.blob.vercel-storage.com",
-    exp: "experience",
-    edu: "education",
-    skills: "skills",
-    projects: "projects",
+    image: "assets/home.jpg",
   },
   socials: [
     {
@@ -68,7 +62,7 @@ const fallbackConfig: PortfolioConfig = {
         "Playing puzzle games / board games",
       ],
     },
-    image: "/assets/about.jpg",
+    image: "assets/about.jpg",
   },
   experience: [
     {
@@ -83,7 +77,7 @@ const fallbackConfig: PortfolioConfig = {
         "Fixed minor UI and logic bugs under the guidance of senior developers.",
         "Participated in code reviews and applied best practices in writing clean, reusable code.",
       ],
-      logo: "/assets/gugotech.png",
+      logo: "assets/experience/gugotech.png",
     },
   ],
   education: [
@@ -99,7 +93,7 @@ const fallbackConfig: PortfolioConfig = {
         "Designed and implemented full-stack web and mobile applications.",
         "Utilized Git and GitHub for version control and collaborative development.",
       ],
-      logo: "/assets/sgu.png",
+      logo: "assets/education/sgu.png",
     },
   ],
   skills: [
@@ -108,47 +102,47 @@ const fallbackConfig: PortfolioConfig = {
       skills: [
         {
           name: "Java",
-          icon: "/assets/java.svg",
+          icon: "assets/skills/java.svg",
         },
         {
           name: "Kotlin",
-          icon: "/assets/kotlin.svg",
+          icon: "assets/skills/kotlin.svg",
         },
         {
           name: "Python",
-          icon: "/assets/python.svg",
+          icon: "assets/skills/python.svg",
         },
         {
           name: "Dart",
-          icon: "/assets/dart.svg",
+          icon: "assets/skills/dart.svg",
         },
         {
           name: "JavaScript",
-          icon: "/assets/javascript.svg",
+          icon: "assets/skills/javascript.svg",
         },
         {
           name: "TypeScript",
-          icon: "/assets/typescript.svg",
+          icon: "assets/skills/typescript.svg",
         },
         {
           name: "HTML 5",
-          icon: "/assets/html5.svg",
+          icon: "assets/skills/html5.svg",
         },
         {
           name: "CSS 3",
-          icon: "/assets/css3.svg",
+          icon: "assets/skills/css3.svg",
         },
         {
           name: "C#",
-          icon: "/assets/c_sharp.svg",
+          icon: "assets/skills/c_sharp.svg",
         },
         {
           name: "C++",
-          icon: "/assets/c_plus_plus.svg",
+          icon: "assets/skills/c_plus_plus.svg",
         },
         {
           name: "C",
-          icon: "/assets/c.svg",
+          icon: "assets/skills/c.svg",
         },
       ],
     },
@@ -157,51 +151,51 @@ const fallbackConfig: PortfolioConfig = {
       skills: [
         {
           name: "React.js",
-          icon: "/assets/react.svg",
+          icon: "assets/skills/react.svg",
         },
         {
           name: "Next.js",
-          icon: "/assets/nextjs.svg",
+          icon: "assets/skills/nextjs.svg",
         },
         {
           name: "Flutter",
-          icon: "/assets/flutter.svg",
+          icon: "assets/skills/flutter.svg",
         },
         {
           name: "Tailwind CSS",
-          icon: "/assets/tailwindcss.svg",
+          icon: "assets/skills/tailwindcss.svg",
         },
         {
           name: "shadcn/ui",
-          icon: "/assets/shadcn_ui.svg",
+          icon: "assets/skills/shadcn_ui.svg",
         },
         {
           name: "Sass",
-          icon: "/assets/sass.svg",
+          icon: "assets/skills/sass.svg",
         },
         {
           name: "Framer Motion",
-          icon: "/assets/framer_motion.svg",
+          icon: "assets/skills/framer_motion.svg",
         },
         {
           name: "Bootstrap",
-          icon: "/assets/bootstrap.svg",
+          icon: "assets/skills/bootstrap.svg",
         },
         {
           name: "Redux",
-          icon: "/assets/redux.svg",
+          icon: "assets/skills/redux.svg",
         },
         {
           name: "jQuery",
-          icon: "/assets/jquery.svg",
+          icon: "assets/skills/jquery.svg",
         },
         {
           name: "Material UI",
-          icon: "/assets/material_ui.svg",
+          icon: "assets/skills/material_ui.svg",
         },
         {
           name: "Vite",
-          icon: "/assets/vite.svg",
+          icon: "assets/skills/vite.svg",
         },
       ],
     },
@@ -210,63 +204,63 @@ const fallbackConfig: PortfolioConfig = {
       skills: [
         {
           name: "Spring",
-          icon: "/assets/spring.svg",
+          icon: "assets/skills/spring.svg",
         },
         {
           name: "PyTorch",
-          icon: "/assets/pytorch.svg",
+          icon: "assets/skills/pytorch.svg",
         },
         {
           name: "Flask",
-          icon: "/assets/flask.svg",
+          icon: "assets/skills/flask.svg",
         },
         {
           name: "FastAPI",
-          icon: "/assets/fastapi.svg",
+          icon: "assets/skills/fastapi.svg",
         },
         {
           name: "Node.js",
-          icon: "/assets/nodejs.svg",
+          icon: "assets/skills/nodejs.svg",
         },
         {
           name: "Hibernate",
-          icon: "/assets/hibernate.svg",
+          icon: "assets/skills/hibernate.svg",
         },
         {
           name: "OpenCV",
-          icon: "/assets/opencv.svg",
+          icon: "assets/skills/opencv.svg",
         },
         {
           name: "Firebase",
-          icon: "/assets/firebase.svg",
+          icon: "assets/skills/firebase.svg",
         },
         {
           name: "Docker",
-          icon: "/assets/docker.svg",
+          icon: "assets/skills/docker.svg",
         },
         {
           name: "Google Cloud",
-          icon: "/assets/google_cloud.svg",
+          icon: "assets/skills/google_cloud.svg",
         },
         {
           name: "Redis",
-          icon: "/assets/redis.svg",
+          icon: "assets/skills/redis.svg",
         },
         {
           name: "MongoDB",
-          icon: "/assets/mongodb.svg",
+          icon: "assets/skills/mongodb.svg",
         },
         {
           name: "Maven",
-          icon: "/assets/maven.svg",
+          icon: "assets/skills/maven.svg",
         },
         {
           name: "PostgreSQL",
-          icon: "/assets/postgresql.svg",
+          icon: "assets/skills/postgresql.svg",
         },
         {
           name: "MySQL",
-          icon: "/assets/mysql.svg",
+          icon: "assets/skills/mysql.svg",
         },
       ],
     },
@@ -275,51 +269,51 @@ const fallbackConfig: PortfolioConfig = {
       skills: [
         {
           name: "Git",
-          icon: "/assets/git.svg",
+          icon: "assets/skills/git.svg",
         },
         {
           name: "GitHub",
-          icon: "/assets/github.svg",
+          icon: "assets/skills/github.svg",
         },
         {
           name: "Postman",
-          icon: "/assets/postman.svg",
+          icon: "assets/skills/postman.svg",
         },
         {
           name: "Figma",
-          icon: "/assets/figma.svg",
+          icon: "assets/skills/figma.svg",
         },
         {
           name: "Vim",
-          icon: "/assets/vim.svg",
+          icon: "assets/skills/vim.svg",
         },
         {
           name: "IntelliJ",
-          icon: "/assets/intellij.svg",
+          icon: "assets/skills/intellij.svg",
         },
         {
           name: "VSCode",
-          icon: "/assets/vscode.svg",
+          icon: "assets/skills/vscode.svg",
         },
         {
           name: "Vercel",
-          icon: "/assets/vercel.svg",
+          icon: "assets/skills/vercel.svg",
         },
         {
           name: "Render",
-          icon: "/assets/render.svg",
+          icon: "assets/skills/render.svg",
         },
         {
           name: "Kaggle",
-          icon: "/assets/kaggle.svg",
+          icon: "assets/skills/kaggle.svg",
         },
         {
           name: "Jira",
-          icon: "/assets/jira.svg",
+          icon: "assets/skills/jira.svg",
         },
         {
           name: "Trello",
-          icon: "/assets/trello.svg",
+          icon: "assets/skills/trello.svg",
         },
       ],
     },
@@ -343,7 +337,7 @@ const fallbackConfig: PortfolioConfig = {
       links: {
         image: {
           platform: "mobile",
-          url: "/assets/studyloop.gif",
+          url: "assets/projects/studyloop.gif",
         },
         sources: [
           {
@@ -374,7 +368,7 @@ const fallbackConfig: PortfolioConfig = {
       links: {
         image: {
           platform: "desktop",
-          url: "/assets/g_weather_forecast.gif",
+          url: "assets/projects/g_weather_forecast.gif",
         },
         sources: [
           {
@@ -402,7 +396,7 @@ const fallbackConfig: PortfolioConfig = {
       links: {
         image: {
           platform: "desktop",
-          url: "/assets/techbeats.gif",
+          url: "assets/projects/techbeats.gif",
         },
         sources: [
           {
@@ -435,7 +429,7 @@ const fallbackConfig: PortfolioConfig = {
       links: {
         image: {
           platform: "desktop",
-          url: "/assets/captionify.gif",
+          url: "assets/projects/captionify.gif",
         },
         sources: [
           {
@@ -462,8 +456,8 @@ const fallbackConfig: PortfolioConfig = {
       endDate: "2024-05-14",
       links: {
         image: {
-          platform: "desktop",
-          url: "/assets/instar.gif",
+          platform: "mobile",
+          url: "assets/projects/instar.gif",
         },
         sources: [
           {
@@ -486,35 +480,25 @@ const fallbackConfig: PortfolioConfig = {
   },
   seo: {
     title: "Quang Duy | Portfolio",
+    appName: "Portfolio",
     description: "Personal portfolio website of Quang Duy - A passionate developer crafting digital experiences",
-    ogImage: "opengraph-image.jpeg",
     url: "https://quangduy.id.vn",
     keywords: [
-      "dinh",
-      "Dinh",
-      "DINH",
-      "quang",
-      "Quang",
-      "QUANG",
-      "duy",
-      "Duy",
-      "DUY",
-      "dinh quang duy",
-      "Dinh Quang Duy",
-      "DINH QUANG DUY",
-      "quang duy",
       "Quang Duy",
-      "QUANG DUY",
-      "quangduy",
-      "QUANGDUY",
+      "Dinh Quang Duy",
       "quangduy201",
-      "QUANGDUY201",
-      "@quangduy201",
-      "portfolio",
-      "dev",
-      "developer",
-      "fullstack dev",
       "fullstack developer",
+      "software engineer",
+      "Spring developer",
+      "React developer",
+      "Next.js developer",
+      "Flutter developer",
+      "personal portfolio",
+      "web developer",
+      "mobile developer",
+      "frontend developer",
+      "backend developer",
+      "portfolio website",
     ],
   },
 };

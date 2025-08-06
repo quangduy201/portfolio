@@ -1,26 +1,33 @@
 import { MetadataRoute } from "next";
 
-export default function manifest(): MetadataRoute.Manifest {
+import { fetchPortfolioConfig } from "@/lib/config";
+import { Seo } from "@/lib/types";
+
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const config = await fetchPortfolioConfig();
+  const seo: Seo = config.seo;
+
   return {
-    name: "Quang Duy's Portfolio",
-    short_name: "Portfolio",
-    description:
-      "Personal portfolio website of Quang Duy - A Full Stack Developer",
+    name: seo.title,
+    short_name: seo.appName,
+    description: seo.description,
     start_url: "/",
-    display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#1a202c",
     icons: [
       {
-        src: "/icon-192.png",
-        sizes: "192x192",
-        type: "image/png",
+        "src": "/web-app-manifest-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
       },
       {
-        src: "/icon-512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
+        "src": "/web-app-manifest-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
     ],
+    theme_color: "#ffffff",
+    background_color: "#ffffff",
+    display: "standalone",
   };
 }

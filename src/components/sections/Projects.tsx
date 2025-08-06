@@ -3,7 +3,7 @@ import TimelineSection from "@/components/TimelineSection";
 import { Image, PortfolioConfig, Project } from "@/lib/types";
 
 export default async function ProjectsSection({ config }: { config: PortfolioConfig }) {
-  const assets = config.assets;
+  const assetsUrl = config.assetsUrl;
   const projects = config.projects.map((item) => ({
     ...item,
     startDate: new Date(item.startDate),
@@ -12,9 +12,7 @@ export default async function ProjectsSection({ config }: { config: PortfolioCon
       ...item.links,
       image: {
         ...item.links.image,
-        url: item.links.image.url.startsWith("/assets/")
-          ? `${item.links.image.url}`
-          : `${assets.url}/${assets.projects}/${item.links.image.url}`,
+        url: `${assetsUrl}/${item.links.image.url}`,
       } as Image,
     },
   })) as Project[];

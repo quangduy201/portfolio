@@ -4,7 +4,7 @@ import SummaryCard from "@/components/SummaryCard";
 import { PortfolioConfig } from "@/lib/types";
 
 export default async function AboutMeSection({ config }: { config: PortfolioConfig }) {
-  const assets = config.assets;
+  const assetsUrl = config.assetsUrl;
   const raw = config.about;
   const about = {
     ...raw,
@@ -12,9 +12,7 @@ export default async function AboutMeSection({ config }: { config: PortfolioConf
       ...raw.personal,
       dob: new Date(raw.personal.dob),
     },
-    image: raw.image.startsWith("/assets/")
-      ? raw.image
-      : `${assets.url}/${raw.image}`,
+    image: `${assetsUrl}/${raw.image}`,
   };
 
   return (

@@ -1,10 +1,17 @@
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+import { fetchPortfolioConfig } from "@/lib/config";
+import { Seo } from "@/lib/types";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const config = await fetchPortfolioConfig();
+  const seo: Seo = config.seo;
+
   return [
     {
-      url: "https://quangduy.id.vn",
+      url: seo.url,
       lastModified: new Date(),
+      changeFrequency: "monthly",
     },
   ];
 }

@@ -1,6 +1,12 @@
 import { MetadataRoute } from "next";
 
-export default function robots(): MetadataRoute.Robots {
+import { fetchPortfolioConfig } from "@/lib/config";
+import { Seo } from "@/lib/types";
+
+export default async function robots(): Promise<MetadataRoute.Robots> {
+  const config = await fetchPortfolioConfig();
+  const seo: Seo = config.seo;
+
   return {
     rules: [
       {
@@ -8,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: ["/"],
       },
     ],
-    sitemap: "https://quangduy.id.vn/sitemap.xml",
-    host: "https://quangduy.id.vn",
+    sitemap: `${seo.url}/sitemap.xml`,
+    host: seo.url,
   };
 }

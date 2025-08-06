@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: seo.title,
     description: seo.description,
-    applicationName: seo.title,
+    applicationName: seo.appName,
     authors: [
       {
         name: info.name,
@@ -36,6 +36,11 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
+    },
+    appleWebApp: {
+      capable: true,
+      title: seo.appName,
+      statusBarStyle: "black-translucent",
     },
   };
 }
