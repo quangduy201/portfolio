@@ -2,14 +2,18 @@ import HeroPhoto from "@/components/HeroPhoto";
 import HeroProfile from "@/components/HeroProfile";
 import { PortfolioConfig } from "@/lib/types";
 
-export default async function HeroSection({ config }: { config: PortfolioConfig }) {
+export default async function HeroSection({
+  config,
+}: {
+  config: PortfolioConfig;
+}) {
   const { assetsUrl, info, socials } = config;
   const image = `${assetsUrl}/${info.image}`;
 
   return (
     <section
       id={"home"}
-      className={"flex min-h-screen items-center pt-24 lg:pt-0"}
+      className={"flex min-h-screen items-center pt-20 lg:pt-0"}
     >
       <div className={"container mx-auto h-full lg:self-center"}>
         <div

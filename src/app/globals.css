@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-primary font-primary leading-loose text-white;
+    @apply pt-safe-top pb-safe-bottom pl-safe-left pr-safe-right bg-primary font-primary leading-loose text-white;
   }
 
   #projects,

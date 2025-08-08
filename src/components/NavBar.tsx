@@ -62,9 +62,9 @@ export function NavBarMobile() {
         </div>
       </nav>
       <div
-        className={`display-[unset] absolute right-0 top-0 z-40 rounded-bl-2xl bg-[#1c1c22] pb-3 pt-24 duration-300 ease-in-out ${isOpened ? "w-2/5" : "w-0"}`}
+        className={`absolute right-0 top-0 z-40 overflow-hidden rounded-bl-2xl bg-[#1c1c22] pb-3 pt-24 duration-300 ease-in-out ${isOpened ? "w-2/5" : "w-0"}`}
       >
-        <ul className={"flex flex-col items-center gap-1"}>
+        <ul className={`flex flex-col items-center gap-1`}>
           {menu.map((item, index) => (
             <li
               key={index}
@@ -81,7 +81,7 @@ export function NavBarMobile() {
         </ul>
       </div>
       <div
-        className={`display-[unset] absolute right-0 top-0 z-10 bg-[#00000080] ${isOpened ? "h-screen w-screen" : "h-0 w-0"}`}
+        className={`absolute right-0 top-0 z-10 bg-[#00000080] ${isOpened ? "h-screen w-screen" : "h-0 w-0"}`}
         onClick={() => setIsOpened(false)}
         onTouchMove={() => setIsOpened(false)}
         onScrollCapture={() => setIsOpened(false)}

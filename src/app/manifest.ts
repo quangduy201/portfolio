@@ -26,8 +26,8 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
         "purpose": "maskable"
       }
     ],
-    theme_color: "#ffffff",
-    background_color: "#ffffff",
+    theme_color: "#000000",
+    background_color: "#1a1a1a",
     display: "standalone",
   };
 }
