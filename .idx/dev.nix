@@ -9,6 +9,9 @@
     pkgs.yarn
     pkgs.nodePackages.pnpm
     pkgs.bun
+    pkgs.openssh
+    pkgs.gnupg
+    pkgs.pinentry.tty
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -29,6 +32,9 @@
       "ms-vscode.js-debug"
       "ms-vscode.vscode-typescript-next"
       "zhuangtongfa.material-theme"
+      "miguelsolorio.fluent-icons"
+      "PKief.material-icon-theme"
+      "waderyan.gitblame"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
