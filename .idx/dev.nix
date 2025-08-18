@@ -11,7 +11,7 @@
     pkgs.bun
     pkgs.openssh
     pkgs.gnupg
-    pkgs.pinentry.tty
+    pkgs.pinentry.curses
   ];
   # Sets environment variables in the workspace
   env = {};
