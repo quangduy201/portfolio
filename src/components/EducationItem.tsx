@@ -10,23 +10,24 @@ export default function EducationItem({ edu }: { edu: Education }) {
 
   return (
     <>
-      <Image
-        src={edu.logo}
-        alt={edu.organization}
-        width={70}
-        height={70}
-        className="absolute right-6 top-6"
-      />
-      <h2 className="text-xl font-semibold text-white">{edu.title}</h2>
-      <p className="text-base text-accent">{edu.organization}</p>
-      <p className="text-sm text-white/70">{edu.location}</p>
-      <p className="text-sm text-accent">
-        {formattedStartDate} - {formattedEndDate}
-      </p>
+      <div className="flex w-full items-start justify-between">
+        <div className="overflow-ellipsis">
+          <h2 className="text-xl font-semibold text-white">{edu.title}</h2>
+          <p className="text-base text-accent">{edu.organization}</p>
+          <p className="text-sm text-white/70">{edu.location}</p>
+          <p className="text-sm text-accent">
+            {formattedStartDate} - {formattedEndDate}
+          </p>
+        </div>
+        <Image src={edu.logo} alt={edu.organization} width={70} height={70} />
+      </div>
       {edu.descriptions.map(
         (description, index) =>
           description.length > 0 && (
-            <p key={index} className="mt-2 text-xs text-white/90 lg:text-sm">
+            <p
+              key={index}
+              className="mt-2 text-xs font-light text-white/90 lg:text-sm"
+            >
               <span className="font-black text-accent">{"-> "}</span>
               {description}
             </p>
