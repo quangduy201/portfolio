@@ -20,7 +20,7 @@ export default function TimelineSection({
         {title}
       </h1>
 
-      <div className="relative ml-4 mt-4 flex flex-col gap-4 border-l-2 border-accent/30 pl-6 pr-2 md:w-2/3 lg:w-4/5 xl:w-3/5">
+      <div className="relative ml-4 mt-4 flex flex-col gap-4 self-stretch border-l-2 border-accent/30 pl-6 pr-2 md:w-2/3 md:self-center lg:w-4/5 xl:w-3/5">
         {items.map((item, index) => (
           <div key={index}>
             {/* Dot */}
@@ -37,7 +37,7 @@ export default function TimelineSection({
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ amount: 0.5 }}
               transition={{ duration: 0.1, delay: index * 0.1 }}
-              className="relative rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-md"
+              className="relative w-full rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-md"
             >
               {item}
             </motion.div>

@@ -23,7 +23,7 @@ export default function HeroPhoto({ url }: { url: string }) {
         >
           <div className={"absolute h-40 w-40 lg:h-80 lg:w-80"}>
             {imageError ? (
-              <Skeleton className="h-full w-full" />
+              <Skeleton className="h-full w-full rounded-full" />
             ) : (
               <Image
                 src={url}
