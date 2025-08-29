@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/shadcnui/tooltip";
 import { Skill, SkillGroup } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 export function SkillIcon({ name, icon }: Skill) {
   const [imageError, setImageError] = useState<boolean>(false);
@@ -45,7 +46,12 @@ export default function SkillItem({ skillGroup }: { skillGroup: SkillGroup }) {
       <h2 className="mb-3 text-xl font-semibold text-white">
         {skillGroup.title}
       </h2>
-      <div className="flex flex-wrap gap-2 lg:gap-3">
+      <div
+        className={cn(
+          "grid grid-cols-[repeat(auto-fill,minmax(48px,1fr))] justify-items-center gap-2",
+          "lg:grid-cols-[repeat(auto-fill,minmax(64px,1fr))] lg:gap-3",
+        )}
+      >
         {skillGroup.skills.map((skill, index) => (
           <SkillIcon key={index} name={skill.name} icon={skill.icon} />
         ))}

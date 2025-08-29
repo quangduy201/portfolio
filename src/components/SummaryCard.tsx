@@ -27,7 +27,7 @@ export default function SummaryCard({ personal }: { personal: Personal }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ amount: 0.5 }}
         transition={{ duration: 0.2, ease: "easeOut", delay: 0.2 }}
-        className="relative grid grid-cols-2 gap-4 rounded-xl border border-white/10 bg-white/5 p-6 text-sm shadow-lg backdrop-blur-md lg:mt-0 [&>p>span]:font-extrabold [&>p>span]:text-accent"
+        className="relative grid grid-cols-3 gap-4 rounded-xl border border-white/10 bg-white/5 p-6 text-sm shadow-lg backdrop-blur-md lg:mt-0 [&>p>span]:font-extrabold [&>p>span]:text-accent"
       >
         <p className="col-span-2">
           <span>Name: </span>
@@ -45,7 +45,7 @@ export default function SummaryCard({ personal }: { personal: Personal }) {
           <span>Gender: </span>
           {personal.gender}
         </p>
-        <p className="col-span-3">
+        <p className="col-span-full">
           <span>Hobbies: </span>
           {personal.hobbies.join(", ")}
         </p>
