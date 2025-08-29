@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaIcons } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
 import { Button } from "@/components/shadcnui/button";
@@ -69,9 +68,7 @@ export default function Profile({info, socials}: {info: Info, socials: Social[]}
             {socials.map((item, index) => (
               <Button asChild key={index} variant={"outline"} size={"icon"}>
                 <Link href={item.link} target="_blank">
-                  <SocialIcon
-                    iconName={item.icon as keyof typeof FaIcons}
-                  />
+                  <SocialIcon iconName={item.icon} />
                 </Link>
               </Button>
             ))}
