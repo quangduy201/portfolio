@@ -31,6 +31,7 @@ export default function HeroPhoto({ url }: { url: string }) {
                 priority
                 quality={100}
                 fill
+                sizes="(min-width: 1024px) 320px, 160px"
                 className={"rounded-full object-contain p-2 lg:p-3"}
                 onError={() => setImageError(true)}
               />

@@ -16,19 +16,19 @@ export default function TimelineSection({
 }: TimelineSectionProps) {
   return (
     <section id={id} className="flex w-full flex-col items-center pt-24">
-      <h1 className="relative text-xl font-semibold text-accent after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:bg-accent after:content-[''] lg:text-3xl">
+      <h1 className="text-accent after:bg-accent relative text-xl font-semibold after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:content-[''] lg:text-3xl">
         {title}
       </h1>
 
-      <div className="relative ml-4 mt-4 flex flex-col gap-4 self-stretch border-l-2 border-accent/30 pl-6 pr-2 md:w-2/3 md:self-center lg:w-4/5 xl:w-3/5">
+      <div className="border-accent/30 relative mt-4 ml-4 flex flex-col gap-4 self-stretch border-l-2 pr-2 pl-6 md:w-2/3 md:self-center lg:w-4/5">
         {items.map((item, index) => (
           <div key={index}>
             {/* Dot */}
             <motion.div
-              initial={{ scale: 0, translateX: -11 }}
+              initial={{ scale: 0, translateX: -1 }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.2, delay: index * 0.1 }}
-              className="border-background absolute left-0 flex h-5 w-5 -translate-x-1/2 items-center justify-center overflow-hidden rounded-full border-4 bg-accent"
+              className="border-background bg-accent absolute left-0 flex h-5 w-5 -translate-x-1/2 items-center justify-center overflow-hidden rounded-full border-4"
             ></motion.div>
 
             {/* Card */}

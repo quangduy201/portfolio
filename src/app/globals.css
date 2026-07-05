@@ -8,7 +8,12 @@
   }
 
   body {
-    @apply pt-safe-top pb-safe-bottom pl-safe-left pr-safe-right bg-primary font-primary leading-loose text-white;
+    @apply bg-primary font-primary leading-loose text-white;
+
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
   }
 
   #projects,
@@ -22,7 +27,7 @@
   #projects h1,
   #skills h1,
   #contact h1 {
-    @apply relative text-xl font-semibold text-accent after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:bg-accent after:content-[''] lg:text-3xl;
+    @apply text-accent after:bg-accent relative text-xl font-semibold after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:content-[''] lg:text-3xl;
   }
 }
 

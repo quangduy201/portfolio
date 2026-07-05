@@ -1,0 +1,134 @@
+{
+  "assetsUrl": "https://your-assets-host.com",
+  "info": {
+    "name": "Your Name",
+    "description": "A short tagline about yourself",
+    "position": "Software Engineer",
+    "cvUrl": "https://example.com/resume.pdf",
+    "image": "assets/home.jpg"
+  },
+  "socials": [
+    {
+      "name": "GitHub",
+      "icon": "FaGithub",
+      "link": "https://github.com/yourusername"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "FaLinkedin",
+      "link": "https://linkedin.com/in/yourusername"
+    }
+  ],
+  "about": {
+    "image": "assets/about.jpg",
+    "personal": {
+      "fullName": "Your Full Name",
+      "dob": "2000-01-01",
+      "location": "City, Country",
+      "gender": "Your Gender",
+      "hobbies": ["Reading", "Photography", "Gaming"]
+    },
+    "title": "Your Name - Your Professional Title",
+    "bio": [
+      "Introduce yourself.",
+      "Describe your interests and experience.",
+      "Share your career goals."
+    ]
+  },
+  "experience": [
+    {
+      "logo": "assets/experience/current-company.png",
+      "title": "Senior Software Engineer",
+      "organization": "Current Company",
+      "location": "Remote",
+      "startDate": "2025-02-01",
+      "descriptions": ["Current position example."]
+    },
+    {
+      "logo": "assets/experience/company.png",
+      "title": "Software Engineer",
+      "organization": "Company Name",
+      "location": "City, Country",
+      "startDate": "2024-01-01",
+      "endDate": "2025-01-01",
+      "descriptions": [
+        "Describe what you worked on.",
+        "Highlight achievements.",
+        "Mention technologies or responsibilities."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "logo": "assets/education/university.png",
+      "title": "Computer Science",
+      "organization": "University Name",
+      "location": "City, Country",
+      "startDate": "2020-09-01",
+      "endDate": "2024-06-01",
+      "descriptions": ["Relevant coursework.", "Projects or achievements."]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages",
+      "skills": [
+        {
+          "icon": "assets/skills/javascript.svg",
+          "name": "JavaScript"
+        },
+        {
+          "icon": "assets/skills/typescript.svg",
+          "name": "TypeScript"
+        }
+      ]
+    },
+    {
+      "title": "Frontend",
+      "skills": [
+        {
+          "icon": "assets/skills/react.svg",
+          "name": "React"
+        },
+        {
+          "icon": "assets/skills/nextjs.svg",
+          "name": "Next.js"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Project Name",
+      "description": "Short project description",
+      "technologies": ["React", "TypeScript", "Node.js"],
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01",
+      "links": {
+        "demo": "https://example.com",
+        "image": {
+          "url": "assets/projects/project.png",
+          "platform": "desktop"
+        },
+        "sources": [
+          {
+            "url": "https://github.com/yourusername/project",
+            "title": "GitHub"
+          }
+        ]
+      }
+    }
+  ],
+  "contact": {
+    "email": "you@example.com",
+    "phone": "+1 234 567 890",
+    "location": "City, Country"
+  },
+  "seo": {
+    "url": "https://yourdomain.com",
+    "title": "Your Name | Portfolio",
+    "appName": "Portfolio",
+    "keywords": ["portfolio", "software engineer", "web developer"],
+    "description": "Personal portfolio website of Your Name."
+  }
+}

@@ -29,6 +29,7 @@ export function SkillIcon({ name, icon }: Skill) {
               src={icon}
               alt={name}
               fill
+              sizes="(min-width: 1024px) 64px, 48px"
               className="object-contain"
               onError={() => setImageError(true)}
             />

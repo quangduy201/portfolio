@@ -1,4 +1,11 @@
-export type MenuId = "home" | "about" | "projects" | "contact" | "experience" | "education" | "skills";
+export type MenuId =
+  | "home"
+  | "about"
+  | "projects"
+  | "contact"
+  | "experience"
+  | "education"
+  | "skills";
 
 export interface MenuItem {
   id: MenuId;
@@ -46,7 +53,7 @@ export interface Experience {
   organization: string;
   location: string;
   startDate: Date | string;
-  endDate: Date | string;
+  endDate?: Date | string;
   descriptions: string[];
   logo: string;
 }
@@ -56,7 +63,7 @@ export interface Education {
   organization: string;
   location: string;
   startDate: Date | string;
-  endDate: Date | string;
+  endDate?: Date | string;
   descriptions: string[];
   logo: string;
 }

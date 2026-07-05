@@ -2,12 +2,16 @@ import ExperienceItem from "@/components/ExperienceItem";
 import TimelineSection from "@/components/TimelineSection";
 import { Experience, PortfolioConfig } from "@/lib/types";
 
-export default async function ExperienceSection({ config }: { config: PortfolioConfig }) {
+export default async function ExperienceSection({
+  config,
+}: {
+  config: PortfolioConfig;
+}) {
   const assetsUrl = config.assetsUrl;
   const experiences = config.experience.map((item) => ({
     ...item,
     startDate: new Date(item.startDate),
-    endDate: new Date(item.endDate),
+    endDate: item.endDate ? new Date(item.endDate) : undefined,
     logo: `${assetsUrl}/${item.logo}`,
   })) as Experience[];
 
