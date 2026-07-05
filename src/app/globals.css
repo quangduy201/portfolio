@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+@plugin "tailwindcss-animate";
 
 @layer base {
   html {
@@ -28,8 +28,9 @@
 
 @layer utilities {
   .loader {
-    @apply animate-spin-half aspect-square w-[50px];
+    @apply aspect-square w-[50px];
     --_c: no-repeat radial-gradient(farthest-side, #00ff99 92%, #0000);
+    animation: spin-half 1s infinite;
     background:
       var(--_c) top,
       var(--_c) left,
@@ -42,9 +43,5 @@
     to {
       transform: rotate(0.5turn);
     }
-  }
-
-  .animate-spin-half {
-    animation: spin-half 1s infinite;
   }
 }
