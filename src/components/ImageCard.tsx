@@ -16,9 +16,9 @@ export default function ImageCard({ url }: { url: string }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ amount: 0.5 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
-        className="flex aspect-[3/4] items-center justify-between rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-md lg:h-auto lg:w-4/12"
+        className="flex aspect-3/4 items-center justify-between rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-md lg:h-auto lg:w-4/12"
       >
-        <div className="relative aspect-[3/4] h-60 overflow-hidden lg:h-full">
+        <div className="relative aspect-3/4 h-60 overflow-hidden lg:h-full">
           {imageError ? (
             <Skeleton className="h-full w-full" />
           ) : (
@@ -26,6 +26,7 @@ export default function ImageCard({ url }: { url: string }) {
               src={url}
               alt={"avatar"}
               fill
+              sizes="(min-width: 1024px) 33vw, 180px"
               style={{ objectFit: "cover" }}
               className="rounded-xl"
               onError={() => setImageError(true)}

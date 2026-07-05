@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 
 export default function useIsTouchDevice(): boolean {
-  const [isTouchDevice, setIsTouchDevice] = useState<boolean>(
-    typeof window === "undefined" || window.matchMedia("(hover: none)").matches,
-  );
+  const [isTouchDevice, setIsTouchDevice] = useState<boolean>(() => {
+    if (typeof window === "undefined") return true;
+
+    return window.matchMedia("(hover: none)").matches;
+  });
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -16,7 +18,6 @@ export default function useIsTouchDevice(): boolean {
       setIsTouchDevice(event.matches);
     };
 
-    setIsTouchDevice(mediaQuery.matches);
     mediaQuery.addEventListener("change", handleChange);
 
     return () => mediaQuery.removeEventListener("change", handleChange);

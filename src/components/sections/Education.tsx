@@ -2,12 +2,16 @@ import EducationItem from "@/components/EducationItem";
 import TimelineSection from "@/components/TimelineSection";
 import { Education, PortfolioConfig } from "@/lib/types";
 
-export default async function EducationSection({ config }: { config: PortfolioConfig }) {
+export default async function EducationSection({
+  config,
+}: {
+  config: PortfolioConfig;
+}) {
   const assetsUrl = config.assetsUrl;
   const education = config.education.map((item) => ({
     ...item,
     startDate: new Date(item.startDate),
-    endDate: new Date(item.endDate),
+    endDate: item.endDate ? new Date(item.endDate) : undefined,
     logo: `${assetsUrl}/${item.logo}`,
   })) as Education[];
 

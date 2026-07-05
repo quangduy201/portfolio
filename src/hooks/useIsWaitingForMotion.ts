@@ -7,19 +7,27 @@ export default function useIsWaitingForMotion(): boolean {
 
   useEffect(() => {
     let cancelled = false;
+    let timer: ReturnType<typeof setTimeout>;
 
     const load = async () => {
-      await import("motion/react");
-
-      setTimeout(() => {
-        if (!cancelled) setIsWaiting(false);
-      }, 4000);
+      try {
+        await import("motion/react");
+      } catch (err) {
+        console.error("Failed to load Motion:", err);
+      } finally {
+        timer = setTimeout(() => {
+          if (!cancelled) {
+            setIsWaiting(false);
+          }
+        }, 2500);
+      }
     };
 
     load();
 
     return () => {
       cancelled = true;
+      clearTimeout(timer);
     };
   }, []);
 

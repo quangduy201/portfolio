@@ -53,7 +53,7 @@ function Tooltip({
         if (React.isValidElement(child) && isTouchDevice) {
           type ChildElement = React.ReactElement<
             HTMLAttributes<HTMLElement>,
-            string | React.JSXElementConstructor<any>
+            string | React.JSXElementConstructor<unknown>
           >;
 
           const typedChild = child as ChildElement;
